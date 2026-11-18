@@ -1178,6 +1178,45 @@ a.contact-item:hover {
   color: var(--white);
 }
 
+.section__head + .cert-grid { margin-top: 0; }
+
+.cert-more { margin-top: 24px; }
+.cert-more__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  list-style: none;
+  padding: 8px 0;
+}
+.cert-more__toggle::-webkit-details-marker { display: none; }
+.cert-more__toggle::before {
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 1;
+}
+.cert-more[open] .cert-more__toggle::before { content: "−"; }
+.cert-more__toggle:hover { text-decoration: underline; }
+.cert-grid--more { margin-top: 16px; }
+.cert-more__all {
+  display: inline-block;
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-500);
+}
+.cert-more__all:hover { color: var(--accent); }
+
 @media (max-width: 600px) {
   .cert-grid { grid-template-columns: repeat(2, 1fr); }
 }
